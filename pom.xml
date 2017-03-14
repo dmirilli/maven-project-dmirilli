@@ -14,6 +14,10 @@
 
 		<mule.version>3.8.3</mule.version>
     	<mule.tools.version>1.2</mule.tools.version>
+    	
+    	<derby.version>10.13.1.1</derby.version>
+    	
+    	<activemq.version>5.14.4</activemq.version>
 	</properties>
 
 	<build>
@@ -59,11 +63,6 @@
 
 	<!-- Mule Dependencies -->
 	<dependencies>
-		<dependency>
-		    <groupId>org.apache.derby</groupId>
-		    <artifactId>derby</artifactId>
-		    <version>10.13.1.1</version>
-		</dependency>
 		<!-- Xml configuration -->
 		<dependency>
         	<groupId>com.mulesoft.muleesb</groupId>
@@ -147,6 +146,24 @@
             <version>${mule.version}</version>
             <scope>provided</scope>
         </dependency>
+    <dependency>
+            <groupId>org.mule.transports</groupId>
+            <artifactId>mule-transport-jms</artifactId>
+            <version>${mule.version}</version>
+            <scope>provided</scope>
+        </dependency>
+		<dependency>
+		    <groupId>org.apache.derby</groupId>
+		    <artifactId>derby</artifactId>
+		    <version>${derby.version}</version>
+		    <!-- <scope>provided</scope> -->
+		</dependency>
+    <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-all</artifactId>
+            <version>${activemq.version}</version>
+        </dependency>
+
     </dependencies>
 
 	<repositories>
